@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<robot name="wmr" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/WhiteGlow" />
+<xacro:property name="wheel_color" value="Gazebo/Black" />
+<xacro:property name="caster_color" value="Gazebo/Silver" />
+<xacro:property name="Lidar_color" value="Gazebo/BlueGlow" />
+
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="Lidar_1">
+  <material>${Lidar_color}</material>
+</gazebo>
+
+<gazebo reference="caster_left_back_1">
+  <material>${caster_color}</material>
+</gazebo>
+
+<gazebo reference="caster_right_back_1">
+  <material>${caster_color}</material>
+</gazebo>
+
+<gazebo reference="caster_right_front_1">
+  <material>${caster_color}</material>
+</gazebo>
+
+<gazebo reference="caster_left_front_1">
+  <material>${caster_color}</material>
+</gazebo>
+
+<gazebo reference="left_wheel_1">
+  <material>${wheel_color}</material>
+</gazebo>
+
+<gazebo reference="right_wheel_1">
+  <material>${wheel_color}</material>
+</gazebo>
+
+</robot>
+
