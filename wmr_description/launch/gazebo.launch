@@ -1,0 +1,16 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro $(find wmr_description)/urdf/wmr.xacro"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model wmr"/>
+  <arg name = "spawn_world" default = "false"/>
+  <arg name = "world" default = "$(find wmr_description)/world/maze.world"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg if = "$(arg spawn_world)" name = "world_name" value="$(arg world)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  <include file="$(find wmr_description)/launch/display.launch" />
+  <include file="$(find wmr_navigation)/launch/navigation.launch" />
+</launch>

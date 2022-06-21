@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<robot name="wmr" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="standard_friction" value="1.0"/>
+<xacro:property name="wheel_friction_mu1" value="200.0"/>
+<xacro:property name="wheel_friction_mu2" value="200.0"/>
+<xacro:property name="caster_friction" value="0.09"/>
+<xacro:property name="caster_kp" value="10000000.0"/>
+<xacro:property name="caster_kd" value="1.0"/>
+<xacro:property name="wheel_kp" value="3100000.0"/>
+<xacro:property name="wheel_kd" value="1.0"/>
+
+<gazebo reference="base_link">
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="dummy"/>
+
+<gazebo reference="Lidar_1">
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_left_back_1">
+  <mu1>${caster_friction}</mu1>
+  <mu2>${caster_friction}</mu2>
+  <!-- <kp>${caster_kp}></kp>
+  <kd>${caster_kd}></kd> -->
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_right_back_1">
+  <mu1>${caster_friction}</mu1>
+  <mu2>${caster_friction}</mu2>
+  <!-- <kp>${caster_kp}></kp>
+  <kd>${caster_kd}></kd> -->
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_right_front_1">
+  <mu1>${caster_friction}</mu1>
+  <mu2>${caster_friction}</mu2>
+  <!-- <kp>${caster_kp}></kp>
+  <kd>${caster_kd}></kd> -->
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_left_front_1">
+  <mu1>${caster_friction}</mu1>
+  <mu2>${caster_friction}</mu2>
+  <!-- <kp>${caster_kp}></kp>
+  <kd>${caster_kd}></kd> -->
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="left_wheel_1">
+  <mu1>${wheel_friction_mu1}</mu1>
+  <mu2>${wheel_friction_mu2}</mu2>
+  <!-- <kp>${wheel_kp}></kp>
+  <kd>${wheel_kd}></kd> -->
+  <!-- <fdir1 value="1 0 0"/> -->
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="right_wheel_1">
+  <mu1>${wheel_friction_mu1}</mu1>
+  <mu2>${wheel_friction_mu2}</mu2>
+  <!-- <kp>${wheel_kp}></kp>
+  <kd>${wheel_kd}></kd> -->
+  <!-- <fdir1 value="1 0 0"/> -->
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+</robot>
