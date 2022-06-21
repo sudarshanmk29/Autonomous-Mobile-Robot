@@ -11,9 +11,8 @@ In the Workspace, move to the src folder and type the below command and press en
 
 With the above command, the repository files will be loaded on to the workspace.
 
-**Note: To ensure all the necessary packages are installed, type the below command outside the src folder inside the ROS Workspace:**
+**Note: To ensure all the necessary packages are installed, type the below command outside the src folder inside the ROS Workspace [You can do this incase you get any error]:**
 
-      source devel/setup.bash
       rosdep install --from-paths src --ignore-src -r -y
 
 **1) TO LAUNCH THE SIMULATION**
