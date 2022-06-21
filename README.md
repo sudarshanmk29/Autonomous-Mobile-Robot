@@ -6,6 +6,8 @@ http://wiki.ros.org/catkin/Tutorials/create_a_workspace
 In the Workspace, move to the src folder and type the below command and press enter:
 
             git clone https://github.com/sudarshanmk29/Autonomous-Mobile-Robot.git
+            cd ..
+            catkin_make
 
 With the above command, the repository files will be loaded on to the workspace.
 
