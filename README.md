@@ -1,9 +1,9 @@
 **HOW TO USE THIS REPOSITORY**
 
-Create a ros workspace. The detailed instructions to create a ros workspace is given in the official ros docunmentation.
+Create a ros workspace. The detailed instructions to create a ros workspace is given in the official ros documentation.
 http://wiki.ros.org/catkin/Tutorials/create_a_workspace
 
-In the Workspace, move to the src folder and type the below command and press enter:
+In the Workspace, move to the src folder and type the below commands:
 
             git clone https://github.com/sudarshanmk29/Autonomous-Mobile-Robot.git
             cd ..
